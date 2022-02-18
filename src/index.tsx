@@ -3,16 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { ChakraProvider } from '@chakra-ui/react';
-import Sidemenu from './components/Sidemenu'
-import Chatsection from './components/Chatsection'
-import Dashboard from './components/Dashboard';
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider>
     <App />
-    {/* <Sidemenu/> */}
-    {/* <Chatsection/> */}
-    <Dashboard/>
     </ChakraProvider>
     
   </React.StrictMode>,

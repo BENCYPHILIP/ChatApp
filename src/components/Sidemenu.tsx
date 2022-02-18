@@ -1,10 +1,8 @@
-import * as React from "react";import {  Avatar, Button, Icon, Link } from '@chakra-ui/react'
+import {  Avatar, Button, Icon, Link } from '@chakra-ui/react'
 import {BsBell, BsCalendar, BsFillChatLeftTextFill, BsGear, BsHouseDoor, BsPerson, BsPlus, BsPower} from 'react-icons/bs'
 import {Flex, Heading} from '@chakra-ui/react';
 
-
-export default class Dashboard extends React.Component <{}> {
-  render() {
+const Sidemenu=()=>{
     return (
 
         
@@ -130,9 +128,9 @@ export default class Dashboard extends React.Component <{}> {
             
            
         
-    )}
+    )
 }
-
+export default Sidemenu;
 
 
 
