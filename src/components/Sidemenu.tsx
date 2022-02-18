@@ -1,5 +1,5 @@
-import {  Avatar, Button, Icon, Link } from '@chakra-ui/react'
-import {BsBell, BsCalendar, BsFillChatLeftTextFill, BsGear, BsHouseDoor, BsPerson, BsPlus, BsPower} from 'react-icons/bs'
+import {  Avatar, Icon, Link } from '@chakra-ui/react'
+import {BsBell, BsCalendar, BsFillChatLeftTextFill, BsGear, BsHouseDoor, BsPerson, BsPower} from 'react-icons/bs'
 import {Flex, Heading} from '@chakra-ui/react';
 
 const Sidemenu=()=>{
