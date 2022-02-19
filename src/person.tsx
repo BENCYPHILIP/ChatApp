@@ -19,5 +19,12 @@ export default[
       time: "3 minute ago",
       message: "Hello,How Are you",
       photourl: "https://bit.ly/prosper-baba"
+    },
+    {
+      id:4,
+      name: "Averin Hanna",
+      time: "4 minute ago",
+      message: "Hello,How Are you",
+      photourl: "https://bit.ly/prosper-baba"
     }
   ]
