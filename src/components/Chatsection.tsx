@@ -3,8 +3,10 @@ import {Flex, Heading} from '@chakra-ui/react';
 import { BsChevronDown, BsPlus, BsSearch } from "react-icons/bs";
 import Chatlist from './Chatlist';
 import person from '../person';
+import { useState } from 'react';
 const Chatssection = () => {
  
+    const [personsdetails,setpersonsdetails]=useState(person)
     return (   
         <Flex w="40%" p="3%" flexDir={'column'} overflow="auto" minH={'100vh'} backgroundColor="#EDF2F7">
         <Box>
@@ -60,13 +62,15 @@ const Chatssection = () => {
         </Box>
       <Flex>
       <Box>
-          {person.map((details:any) => (
+          {
+          personsdetails.map((details) => (
            <Chatlist
              name={details.name}
               time={details.time}
               message={details.message}
               photo={details.photourl}></Chatlist>  
-          ))}
+          ))
+          }
         </Box>
       </Flex>   
 </Flex>  
