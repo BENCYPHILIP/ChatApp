@@ -1,8 +1,12 @@
  
-import { Avatar, Box,Text, Flex, AvatarBadge, Circle, Icon} from '@chakra-ui/react';
+import { Avatar, Box,Text, Flex, AvatarBadge, Circle, Icon, Link, Heading, InputGroup, InputLeftElement, InputRightElement, Input} from '@chakra-ui/react';
 import { AttachmentIcon } from '@chakra-ui/icons'
-import { BsThreeDotsVertical } from 'react-icons/bs';
-
+import { BsEmojiSmile, BsFilm, BsHouseDoor, BsThreeDotsVertical } from 'react-icons/bs';
+import { RiSendPlaneLine, RiFilmLine } from "react-icons/ri";
+import { MdInsertPhoto } from "react-icons/md";
+import { VscAdd } from "react-icons/vsc";
+import { HiOutlineDocumentRemove } from "react-icons/hi";
+import { FiSmile } from "react-icons/fi";
 const Messages =()=>{
 
     return (
@@ -33,6 +37,75 @@ const Messages =()=>{
                    
                   </Flex>
                 </Box>
+                <Box>
+
+
+                <Flex flexDirection={'column'} p={4} >
+                                <Flex>
+                                <Avatar src="https://bit.ly/ryan-florence" w={'10'} h={'10'} />
+                                <Text fontSize="md" bg='#2A8BF2'color="white" p={3} ml={3} shadow='md'>
+                                        Hello,How Are you
+                                </Text>
+                                </Flex>
+                                <Flex>
+                                <Text fontSize="md" bg='#2A8BF2'color="white" p={3} ml={51} mt={4} shadow='md'>
+                                       where are you
+                                </Text>
+                                
+                                
+                                </Flex>
+                                <Text fontSize="sm" ml={100}>
+                                       4 days ago
+                                </Text>
+                                
+                </Flex>
+                </Box>
+          
+
+          <Box style={{ position: "absolute",width: "150px",height: "74px",left: "1145px",top: "290px"}}>
+          <Text fontSize="md" bg='white'color="black" p={4} shadow='md'>
+                                     Hi I am fine
+                                </Text>
+                                <Text fontSize="sm" ml={50} p={2}>
+                                       4 days ago
+                                </Text>
+          </Box>
+
+
+         
+
+          <Box style={{  position: "absolute",width: "500px",height: "80px",left: "800px",top: "440px"}}>
+         
+            <Box>
+            <Circle size="40px" bg="#2A8BF2" color="white">
+                <Icon as={BsFilm} />
+              </Circle>
+              <Circle size="40px" bg="#2A8BF2" color="white">
+                <Icon as={MdInsertPhoto} />
+              </Circle>
+              <Circle size="40px" bg="#2A8BF2" color="white">
+                <Icon as={HiOutlineDocumentRemove} />
+              </Circle>
+              
+              
+            </Box>
+          
+
+          <InputGroup>
+            <Circle size="40px" bg="#2A8BF2" color="white">
+              <InputLeftElement
+                pointerEvents="none"
+                children={<Icon as={VscAdd} />}
+              />
+            </Circle>
+            <Input type="" placeholder="Type a message here" size="lg" />
+            <InputRightElement
+              children={<Icon as={FiSmile} />}
+              color="gray.500"
+            />
+           
+          </InputGroup>
+        </Box>
           </Box>
       </Flex>
     )
