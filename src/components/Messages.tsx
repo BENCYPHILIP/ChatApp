@@ -74,23 +74,24 @@ const Messages =()=>{
 
          
 
-          <Box style={{  position: "absolute",width: "500px",height: "80px",left: "800px",top: "440px"}}>
-         
-            <Box>
+          <Box style={{  position: "absolute",width: "470px",height: "80px",left: "800px",top: "440px"}}>
+            <Flex>
             <Circle size="40px" bg="#2A8BF2" color="white">
                 <Icon as={BsFilm} />
               </Circle>
-              <Circle size="40px" bg="#2A8BF2" color="white">
+            </Flex>
+
+            <Flex pt={1}>
+            <Circle size="40px" bg="#2A8BF2" color="white">
                 <Icon as={MdInsertPhoto} />
               </Circle>
-              <Circle size="40px" bg="#2A8BF2" color="white">
-                <Icon as={HiOutlineDocumentRemove} />
-              </Circle>
-              
-              
-            </Box>
-          
-
+            </Flex>
+            <Flex pt={1}>
+            <Circle size="40px" bg="#2A8BF2" color="white">
+            <Icon as={HiOutlineDocumentRemove} />
+            </Circle>
+            </Flex>
+          <Flex pt={1}>
           <InputGroup>
             <Circle size="40px" bg="#2A8BF2" color="white">
               <InputLeftElement
@@ -98,13 +99,15 @@ const Messages =()=>{
                 children={<Icon as={VscAdd} />}
               />
             </Circle>
-            <Input type="" placeholder="Type a message here" size="lg" />
+            <Input type="text" placeholder="Type a message here" ml={3} />
             <InputRightElement
               children={<Icon as={FiSmile} />}
               color="gray.500"
             />
            
           </InputGroup>
+          </Flex>
+         
         </Box>
           </Box>
       </Flex>
