@@ -1,2 +1,2 @@
 ## Chat dashboard
-![image](https://user-images.githubusercontent.com/48004588/154904905-aab2855b-9101-47e4-a760-f6d4fe2569fd.png)
+![image](https://user-images.githubusercontent.com/48004588/154941293-7bc185b7-046e-4897-949c-37bc70d9555a.png)
