@@ -74,7 +74,7 @@ const Messages =()=>{
 
          
 
-          <Box style={{  position: "absolute",width: "455px",height: "80px",left: "800px",top: "440px"}}>
+          <Box style={{  position: "absolute",width: "500px",height: "80px",left: "800px",top: "440px"}}>
             <Flex>
             <Circle size="40px" bg="#2A8BF2" color="white">
                 <Icon as={BsFilm} />
@@ -100,8 +100,18 @@ const Messages =()=>{
               />
             </Circle>
             <Input type="text" placeholder="Type a message here" ml={3} />
-            <InputRightElement children={<Icon as={FiSmile} />}  />
+            <InputRightElement
+              children={<Icon as={BsEmojiSmile} />}
+            />
           </InputGroup>
+                {/* <Box pt={'20px'}>
+                <Icon as={BsEmojiSmile}/> 
+                </Box> */}
+              <Box pl={2}>
+              <Circle size="40px" bg="#2A8BF2" color="white">
+              <Icon as={RiSendPlaneLine} />
+            </Circle>
+              </Box>
           </Flex>
         
         </Box>
