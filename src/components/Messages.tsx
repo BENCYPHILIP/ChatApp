@@ -7,6 +7,7 @@ import { MdInsertPhoto } from "react-icons/md";
 import { VscAdd } from "react-icons/vsc";
 import { HiOutlineDocumentRemove } from "react-icons/hi";
 import { FiSmile } from "react-icons/fi";
+
 const Messages =()=>{
 
     return (
