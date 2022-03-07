@@ -2,12 +2,14 @@ import { Avatar, Box, Flex, FormControl, Heading, InputGroup,Input,Stack, Button
 import { useState } from 'react';
 import { Link } from "react-router-dom";
 const Register=()=>{
+   
     const [name, setName] = useState('');
     const [place, setPlace] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const registration=()=>
+    const Registeration=(e:any)=>
     {
+        e.preventDefault();
         localStorage.setItem("name",name)
         localStorage.setItem("place",place)
         localStorage.setItem("email",email)
@@ -31,9 +33,10 @@ const Register=()=>{
           <Avatar bg="teal.500" />
           <Heading color="teal.400">Register Here</Heading>
           <Box minW={{ base: "90%", md: "468px" }}>
-            <form>
+            <form  onSubmit={Registeration}  >
               <Stack
                 spacing={4}
+                
                 p="1rem"
                 backgroundColor="whiteAlpha.900"
                 boxShadow="md"
@@ -72,7 +75,7 @@ const Register=()=>{
                   variant="solid"
                   colorScheme="teal"
                   width="full"
-                  onClick={registration}  >
+                 >
                   Register
                 </Button>
               </Stack>

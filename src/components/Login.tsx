@@ -17,6 +17,23 @@ const Login = () => {
     //     alert(`Email: ${email} & Password: ${password}`);
         
     // }
+    const TOKEN_KEY = 'usertoken';
+
+    const login = () => {
+    localStorage.setItem(TOKEN_KEY, 'usertoken');
+}
+
+//     const logout = () => {
+//     localStorage.removeItem(TOKEN_KEY);
+// }
+
+    const isLogin = () => {
+    if (localStorage.getItem(TOKEN_KEY)) {
+        return true;
+    }
+
+    return false;
+}
     const handleShowClick = () => setShowPassword(!showPassword);
     const signin=()=>{
         if("email" in localStorage && "password" in localStorage){
