@@ -1,7 +1,7 @@
 import { Avatar, Box, Flex, FormControl, Heading, InputGroup,Input,Stack, Button, FormLabel } from '@chakra-ui/react';
 import './Register.css';
-import { Component, useState } from 'react';
-import { Link, NavLink } from "react-router-dom";
+import {  useState } from 'react';
+import { Link, NavLink,Outlet } from "react-router-dom";
 const Register=()=>{
     const TOKEN_KEY = 'usertoken';
     const [name, setName] = useState('');
@@ -94,6 +94,9 @@ const Register=()=>{
          <NavLink to="data2"><span>Data2</span></NavLink>
          <NavLink to="data3"><span>Data3</span></NavLink>
        </div>
+      <div className='details'>
+          <Outlet/>
+      </div>
         </Stack>
        
       </Flex>
