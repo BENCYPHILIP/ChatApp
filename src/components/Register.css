@@ -1,0 +1,16 @@
+.submenu
+{
+    margin-top: 20px;
+    margin-bottom:20px
+}
+.submenu a
+{
+    text-decoration: none;
+    color:white;
+}
+.submenu span
+{
+    padding:5px;
+    display:inline-block;
+    background:grey ;
+}

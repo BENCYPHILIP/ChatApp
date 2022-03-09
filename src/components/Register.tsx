@@ -1,19 +1,21 @@
 import { Avatar, Box, Flex, FormControl, Heading, InputGroup,Input,Stack, Button, FormLabel } from '@chakra-ui/react';
-import { useState } from 'react';
-import { Link } from "react-router-dom";
+import './Register.css';
+import { Component, useState } from 'react';
+import { Link, NavLink } from "react-router-dom";
 const Register=()=>{
-   
+    const TOKEN_KEY = 'usertoken';
     const [name, setName] = useState('');
     const [place, setPlace] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const Registeration=(e:any)=>
+    const Registration=(e:any)=>
     {
         e.preventDefault();
         localStorage.setItem("name",name)
         localStorage.setItem("place",place)
         localStorage.setItem("email",email)
         localStorage.setItem("password",password)
+        localStorage.setItem(TOKEN_KEY, 'usertoken');
     }
     return(
         <Flex
@@ -33,7 +35,7 @@ const Register=()=>{
           <Avatar bg="teal.500" />
           <Heading color="teal.400">Register Here</Heading>
           <Box minW={{ base: "90%", md: "468px" }}>
-            <form  onSubmit={Registeration}  >
+            <form  onSubmit={Registration}  >
               <Stack
                 spacing={4}
                 
@@ -87,6 +89,11 @@ const Register=()=>{
                 </Box>
             </form>
           </Box>
+          <div className='submenu'>
+         <NavLink to="data1"><span>Data1</span></NavLink>
+         <NavLink to="data2"><span>Data2</span></NavLink>
+         <NavLink to="data3"><span>Data3</span></NavLink>
+       </div>
         </Stack>
        
       </Flex>

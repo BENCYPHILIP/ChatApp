@@ -1,5 +1,6 @@
 import { Alert, AlertIcon, Avatar, Box, Button, chakra, Flex, FormControl, FormHelperText, Heading, Input, InputGroup, InputLeftElement, InputRightElement,Stack } from "@chakra-ui/react";
-import { useState } from "react";
+import { stringify } from "querystring";
+import { useEffect, useState } from "react";
 import { FaUserAlt, FaLock } from "react-icons/fa";
 import { Link, Navigate, useNavigate} from "react-router-dom";
 
@@ -11,32 +12,40 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [token,seToken]=useState(false)
+    const [localstroageemail, setlocalstroageemail] = useState<any | null>(null);
+    const [localstroagepassword, setLocalstroagePassword] = useState<any | null>(null);
     // function handleSubmit(event:any) {
     //     event.preventDefault();
         
     //     alert(`Email: ${email} & Password: ${password}`);
         
     // }
+    // const token='usertoken'
     const TOKEN_KEY = 'usertoken';
 
-    const login = () => {
-    localStorage.setItem(TOKEN_KEY, 'usertoken');
-}
+//     const login = () => {
+//     localStorage.setItem(TOKEN_KEY, 'usertoken');
+// }
 
 //     const logout = () => {
 //     localStorage.removeItem(TOKEN_KEY);
 // }
 
-    const isLogin = () => {
-    if (localStorage.getItem(TOKEN_KEY)) {
-        return true;
-    }
+//     const isLogin = () => {
+//     if (localStorage.getItem(TOKEN_KEY)) {
+//         return true;
+//     }
 
-    return false;
-}
+//     return false;
+// }
+    useEffect(() => {
+      setlocalstroageemail(localStorage.getItem("email"));
+      setLocalstroagePassword(localStorage.getItem("password"));
+    }, []);
     const handleShowClick = () => setShowPassword(!showPassword);
     const signin=()=>{
-        if("email" in localStorage && "password" in localStorage){
+        if(localstroageemail == email && localstroagepassword == password && localStorage.getItem(TOKEN_KEY)){
         //  alert('yes');
          navigate("/dashboard");
      } else {

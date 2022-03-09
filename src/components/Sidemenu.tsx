@@ -1,8 +1,14 @@
 import {  Avatar, Icon, Link } from '@chakra-ui/react'
 import {BsBell, BsCalendar, BsFillChatLeftTextFill, BsGear, BsHouseDoor, BsPerson, BsPower} from 'react-icons/bs'
 import {Flex, Heading} from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 
 const Sidemenu=()=>{
+    const navigate = useNavigate();
+    const logout = () => {
+        localStorage.clear();
+        navigate("/");
+      }
     return (
 
         
@@ -110,7 +116,7 @@ const Sidemenu=()=>{
                                 
                             </Flex>
                         </Flex>
-                        <Flex >
+                        <Flex onClick={logout}>
                         <Link>
                                         <Icon as={BsPower} fontSize="1xl">
                                         
